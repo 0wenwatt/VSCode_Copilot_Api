@@ -77,6 +77,18 @@ Last updated: 2026-04-18
 
 ---
 
+## Modules/VSCode
+| Location | Cloned Repo | GitHub URL |
+|----------|-------------|------------|
+| `Modules/VSCode/github/vscode-docs/` | `microsoft/vscode-docs` | https://github.com/microsoft/vscode-docs |
+
+### Submodule: VSCode_Extension
+| Location | Cloned Repo | GitHub URL |
+|----------|-------------|------------|
+| `Modules/VSCode/VSCode_Extension/github/vscode-extension-samples/` | `microsoft/vscode-extension-samples` | https://github.com/microsoft/vscode-extension-samples |
+
+---
+
 ## Modules/VSCode/VSCode_Extension/VSCode_Github_Copilot
 
 ### MCP
@@ -117,6 +129,7 @@ Last updated: 2026-04-18
 | Lang_Ecosystem/langsmith | 2 | SDK + cookbook |
 | treesitter | 1 | Core parser library |
 | mermaid | 2 | Core library + MCP server |
+| VSCode | 2 | vscode-docs + vscode-extension-samples |
 | VSCode/copilot_api_gateway | 1 | OpenAI-compatible gateway |
 | VSCode/MCP | 4 | MCP servers monorepo, Python SDK, FastMCP, FastMCP docs extension |
-| **Total** | **17** | |
+| **Total** | **19** | |
