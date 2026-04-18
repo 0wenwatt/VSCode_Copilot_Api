@@ -26,6 +26,7 @@ STARTUP_SCRIPTS_DIR = WORKSPACE_ROOT / "scripts" / "startup_scripts"
 # extra_args is a list of CLI flags forwarded from this script where relevant.
 STARTUP_SCRIPTS: list[tuple[Path, list[str]]] = [
     (STARTUP_SCRIPTS_DIR / "setup_arangodb_docker.py", []),
+    (WORKSPACE_ROOT / "Modules" / "AI" / "agents" / "MCP" / "JarvisMCP" / "startup.py", []),
 ]
 
 

@@ -1,0 +1,4 @@
+# JarvisMCP dependencies
+fastmcp>=3.0.0
+httpx>=0.25.0  # For HTTP client testing
+python-dotenv>=1.0.0  # For .env configuration
