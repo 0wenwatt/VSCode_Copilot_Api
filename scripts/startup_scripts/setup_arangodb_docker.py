@@ -144,7 +144,7 @@ def _wait_for_arango(v3_root: Path, port: int, retries: int, delay: float, dry_r
         
         try:
             if arango_http_up(url=f"http://127.0.0.1:{port}/_api/version"):
-                print(f"✓ arangodb healthy on attempt {attempt}/{retries}")
+                print(f"[OK] arangodb healthy on attempt {attempt}/{retries}")
                 return
         except Exception:
             pass
@@ -189,13 +189,13 @@ def main() -> int:
     _ensure_env_file(docker_dir, args.dry_run)
     arango_port = _read_arango_port(docker_dir)
     print(f"  arango_host_port={arango_port}")
-    print("  ✓ environment ready\n")
+    print("  [OK] environment ready\n")
     time.sleep(1)  # Small gap between phases
 
     # Phase 2: Start Docker daemon
     print("[Phase 2/5] Starting Docker Desktop...")
     _start_docker_desktop(args.dry_run)
-    print("  ✓ Docker daemon ready\n")
+    print("  [OK] Docker daemon ready\n")
     time.sleep(2)  # Wait for Docker to stabilize
 
     # Phase 3: Verify Docker tools
@@ -204,7 +204,7 @@ def main() -> int:
         try:
             _run(["docker", "--version"], dry_run=args.dry_run)
             _run(["docker", "compose", "version"], dry_run=args.dry_run)
-            print("  ✓ Docker tools verified\n")
+            print("  [OK] Docker tools verified\n")
         except subprocess.CalledProcessError as e:
             raise RuntimeError(f"Docker tool verification failed: {e}")
     else:
@@ -218,16 +218,16 @@ def main() -> int:
         up_cmd.extend(["--profile", "mcp"])
     up_cmd.extend(["-f", str(compose_file), "up", "-d"])
     _run(up_cmd, cwd=docker_dir, dry_run=args.dry_run)
-    print("  ✓ container(s) started\n")
+    print("  [OK] container(s) started\n")
     time.sleep(3)  # Give container time to initialize before health checks
 
     # Phase 5: Wait for ArangoDB to be healthy
     print("[Phase 5/5] Waiting for ArangoDB to become healthy...")
     _wait_for_arango(v3_root, port=arango_port, retries=args.retries, delay=args.delay, dry_run=args.dry_run)
-    print("  ✓ ArangoDB healthy\n")
+    print("  [OK] ArangoDB healthy\n")
 
     print("="*60)
-    print("✓ Setup complete: arangodb is ready")
+    print("[OK] Setup complete: arangodb is ready")
     print("="*60)
     return 0
 
