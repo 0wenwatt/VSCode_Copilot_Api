@@ -1,0 +1,30 @@
+{
+  "name": "copilot-comprehensive-test-suite",
+  "displayName": "Copilot Extension Samples - Comprehensive Test Suite",
+  "description": "Tests all 7 Copilot API examples from vscode-extension-samples",
+  "version": "1.0.0",
+  "publisher": "copilot-demo",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0",
+    "node": ">=18.0.0"
+  },
+  "main": "./dist/testHarness.js",
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "node dist/testHarness.js",
+    "test:verbose": "node dist/testHarness.js --verbose",
+    "test:json": "node dist/testHarness.js --json",
+    "test:all": "npm run compile && npm run test:json",
+    "generate-report": "node dist/testHarness.js --report"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.115.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "vscode-copilot-demo-context-window",
+  "displayName": "VSCode Copilot Context Window Demo",
+  "description": "Demo showing how to access and read Copilot context window content",
+  "version": "0.1.0",
+  "publisher": "demo",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./dist/extension.js",
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:demo.contextWindow.readContext"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "demo.contextWindow.readContext",
+        "title": "Demo: Read Copilot Context Window",
+        "category": "Copilot Demo"
+      },
+      {
+        "command": "demo.contextWindow.logActiveEditor",
+        "title": "Demo: Log Active Editor to Context",
+        "category": "Copilot Demo"
+      },
+      {
+        "command": "demo.contextWindow.logSelection",
+        "title": "Demo: Log Selection to Context",
+        "category": "Copilot Demo"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.3.0"
+  }
+}

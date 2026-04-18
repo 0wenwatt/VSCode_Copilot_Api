@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "VSCode Copilot API - Root"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[markdown]": {
+      "editor.formatOnSave": false
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/build": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "GitHub.copilot",
+      "GitHub.copilot-chat",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "ms-vscode.extension-test-runner"
+    ]
+  }
+}

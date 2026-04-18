@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  arangodb:
+    image: arangodb:latest
+    container_name: arangodb-server
+    environment:
+      ARANGO_ROOT_PASSWORD: ${ARANGO_ROOT_PASSWORD:-test123}
+      ARANGODB_OVERRIDE_DETECTED_TOTAL_MEMORY: ${ARANGODB_MEMORY:-2G}
+      ARANGODB_OVERRIDE_DETECTED_NUMBER_OF_CORES: ${ARANGODB_CORES:-2}
+    ports:
+      - "${ARANGO_PORT:-8529}:8529"
+    volumes:
+      - arangodb-data:/var/lib/arangodb3
+      - arangodb-apps:/var/lib/arangodb3-apps
+    networks:
+      - arangodb-net
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "arangosh --server.endpoint tcp://127.0.0.1:8529 --server.username root --server.password \"$${ARANGO_ROOT_PASSWORD:-test123}\" --javascript.execute-string \"db._version()\" >/dev/null 2>&1"
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  mcp-arangodb:
+    image: arangodb/mcp-arangodb:latest
+    container_name: mcp-arangodb
+    environment:
+      ARANGO_HOSTS: http://arangodb:8529
+      ARANGO_ROOT_USERNAME: root
+      ARANGO_ROOT_PASSWORD: ${ARANGO_ROOT_PASSWORD:-test123}
+      ARANGO_DEFAULT_DB_NAME: ${ARANGO_DEFAULT_DB_NAME:-_system}
+      ARANGO_VERIFY_SSL: ${ARANGO_VERIFY_SSL:-false}
+    networks:
+      - arangodb-net
+    depends_on:
+      arangodb:
+        condition: service_healthy
+    restart: unless-stopped
+    profiles:
+      - mcp
+
+volumes:
+  arangodb-data:
+    driver: local
+  arangodb-apps:
+    driver: local
+
+networks:
+  arangodb-net:
+    driver: bridge

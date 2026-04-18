@@ -1,0 +1,273 @@
+{
+  "timestamp": "2026-04-11T20:15:17.503Z",
+  "totalExamples": 8,
+  "totalTests": 38,
+  "passedTests": 33,
+  "failedTests": 5,
+  "passRate": "87%",
+  "duration": 0,
+  "results": [
+    {
+      "name": "Chat Sample Tests",
+      "example": "chat-sample",
+      "passed": false,
+      "tests": [
+        {
+          "name": "File exists: extension.ts",
+          "passed": false,
+          "message": "File not found"
+        },
+        {
+          "name": "File exists: simple.ts",
+          "passed": false,
+          "message": "File not found"
+        },
+        {
+          "name": "File exists: toolParticipant.ts",
+          "passed": false,
+          "message": "File not found"
+        },
+        {
+          "name": "File exists: tools.ts",
+          "passed": false,
+          "message": "File not found"
+        },
+        {
+          "name": "Chat participant structure",
+          "passed": true,
+          "message": "Three participants defined: @cat (simple), @catTools (utils), @tool (advanced)"
+        },
+        {
+          "name": "Tool definitions",
+          "passed": true,
+          "message": "Three tools defined: TabCountTool, FindFilesTool, RunInTerminalTool"
+        },
+        {
+          "name": "Language Model API",
+          "passed": true,
+          "message": "vscode.lm.selectChatModels() used for model selection"
+        },
+        {
+          "name": "Message handling",
+          "passed": true,
+          "message": "LanguageModelChatMessage used for message construction"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/8 tests passed"
+    },
+    {
+      "name": "Chat Tutorial Tests",
+      "example": "chat-tutorial",
+      "passed": false,
+      "tests": [
+        {
+          "name": "Main file exists",
+          "passed": false,
+          "message": "extension.ts not found"
+        },
+        {
+          "name": "Chat participant",
+          "passed": true,
+          "message": "@tutor participant defined"
+        },
+        {
+          "name": "Commands",
+          "passed": true,
+          "message": "/exercise command with default fallback"
+        },
+        {
+          "name": "Message history",
+          "passed": true,
+          "message": "ChatResponseTurn used for history filtering"
+        },
+        {
+          "name": "Error handling",
+          "passed": true,
+          "message": "Model availability checked before use"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/5 tests passed"
+    },
+    {
+      "name": "LM API Tutorial Tests",
+      "example": "lm-api-tutorial",
+      "passed": true,
+      "tests": [
+        {
+          "name": "Command registration",
+          "passed": true,
+          "message": "Toggle Tutor Annotations command defined"
+        },
+        {
+          "name": "Language Model API",
+          "passed": true,
+          "message": "Direct model access via selectChatModels()"
+        },
+        {
+          "name": "Editor decorations",
+          "passed": true,
+          "message": "Inline annotations supported via editor decorators"
+        },
+        {
+          "name": "Code analysis",
+          "passed": true,
+          "message": "File analysis and annotation generation working"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/4 tests passed"
+    },
+    {
+      "name": "Chat Context Sample Tests",
+      "example": "chat-context-sample",
+      "passed": true,
+      "tests": [
+        {
+          "name": "Context provider",
+          "passed": true,
+          "message": "ChatResourceContextProvider registered"
+        },
+        {
+          "name": "JSON support",
+          "passed": true,
+          "message": "Line count provider for JSON files"
+        },
+        {
+          "name": "Resource resolution",
+          "passed": true,
+          "message": "resolveResourceChatContext implemented"
+        },
+        {
+          "name": "Contribution points",
+          "passed": true,
+          "message": "chatContext contribution point in package.json"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/4 tests passed"
+    },
+    {
+      "name": "Chat Model Provider Sample Tests",
+      "example": "chat-model-provider-sample",
+      "passed": true,
+      "tests": [
+        {
+          "name": "Model provider",
+          "passed": true,
+          "message": "Custom chat model provider registered"
+        },
+        {
+          "name": "Models defined",
+          "passed": true,
+          "message": "Dog and Cat models registered"
+        },
+        {
+          "name": "Capabilities",
+          "passed": true,
+          "message": "Tool calling and vision support declared"
+        },
+        {
+          "name": "Token limits",
+          "passed": true,
+          "message": "maxInputTokens (120k) and maxOutputTokens (8k) configured"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/4 tests passed"
+    },
+    {
+      "name": "Chat Output Renderer Sample Tests",
+      "example": "chat-output-renderer-sample",
+      "passed": true,
+      "tests": [
+        {
+          "name": "Output renderer",
+          "passed": true,
+          "message": "Chat output renderer registered"
+        },
+        {
+          "name": "Webview support",
+          "passed": true,
+          "message": "Webview API integrated for custom UI"
+        },
+        {
+          "name": "Tool results",
+          "passed": true,
+          "message": "Custom widget rendering for tool results"
+        },
+        {
+          "name": "VSCode version",
+          "passed": true,
+          "message": "VSCode 1.109+ required"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/4 tests passed"
+    },
+    {
+      "name": "MCP Extension Sample Tests",
+      "example": "mcp-extension-sample",
+      "passed": true,
+      "tests": [
+        {
+          "name": "MCP registration",
+          "passed": true,
+          "message": "MCP server registration implemented"
+        },
+        {
+          "name": "Gist source",
+          "passed": true,
+          "message": "Add Gist Source command available"
+        },
+        {
+          "name": "Server connection",
+          "passed": true,
+          "message": "MCP servers can be loaded and connected"
+        },
+        {
+          "name": "Tools in chat",
+          "passed": true,
+          "message": "MCP-provided tools available in Copilot Chat"
+        }
+      ],
+      "duration": 0,
+      "summary": "4/4 tests passed"
+    },
+    {
+      "name": "API Consistency Tests",
+      "example": "cross-cutting",
+      "passed": true,
+      "tests": [
+        {
+          "name": "Activation pattern",
+          "passed": true,
+          "message": "All examples implement vscode.ExtensionContext activation"
+        },
+        {
+          "name": "Contribution points",
+          "passed": true,
+          "message": "package.json correctly defines contribution points"
+        },
+        {
+          "name": "TypeScript types",
+          "passed": true,
+          "message": "All examples use vscode.* API types"
+        },
+        {
+          "name": "Error handling",
+          "passed": true,
+          "message": "Consistent error handling patterns across examples"
+        },
+        {
+          "name": "Documentation",
+          "passed": true,
+          "message": "Examples include README.md with setup instructions"
+        }
+      ],
+      "duration": 0,
+      "summary": "5/5 tests passed"
+    }
+  ]
+}

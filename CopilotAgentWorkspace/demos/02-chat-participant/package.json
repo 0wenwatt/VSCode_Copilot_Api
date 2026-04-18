@@ -1,0 +1,39 @@
+{
+  "name": "vscode-copilot-demo-chat-participant",
+  "displayName": "VSCode Copilot Chat Participant Demo",
+  "description": "Demo showing how to create and register a custom chat participant",
+  "version": "0.1.0",
+  "publisher": "demo",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./dist/extension.js",
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "demo.chatParticipant.test",
+        "title": "Demo: Test Chat Participant",
+        "category": "Copilot Demo"
+      },
+      {
+        "command": "demo.chatParticipant.verifyRegistration",
+        "title": "Demo: Verify Chat Participant Registered",
+        "category": "Copilot Demo"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "vscode-copilot-demo-lm-tool",
+  "displayName": "VSCode Copilot Language Model Tool Demo",
+  "description": "Demo showing how to register and invoke language model tools",
+  "version": "0.1.0",
+  "publisher": "demo",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./dist/extension.js",
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "demo.lmTool.invoke",
+        "title": "Demo: Invoke LM Tool Directly",
+        "category": "Copilot Demo"
+      },
+      {
+        "command": "demo.lmTool.listTools",
+        "title": "Demo: List Registered Tools",
+        "category": "Copilot Demo"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./dist/test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,45 @@
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+out/
+*.js
+*.js.map
+*.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Misc
+.cache/
+temp/
+tmp/
+*.tmp
+
+# OS
+Thumbs.db
+desktop.ini
