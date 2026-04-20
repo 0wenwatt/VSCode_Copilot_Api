@@ -1,0 +1,60 @@
+[submodule "Modules/AI/Lang_Ecosystem/langchain/github/langchain"]
+	path = Modules/AI/Lang_Ecosystem/langchain/github/langchain
+	url = https://github.com/langchain-ai/langchain.git
+[submodule "Modules/AI/Lang_Ecosystem/langchain/langchain_arangoDB/github/langchain-arangodb"]
+	path = Modules/AI/Lang_Ecosystem/langchain/langchain_arangoDB/github/langchain-arangodb
+	url = https://github.com/arangoml/langchain-arangodb.git
+[submodule "Modules/AI/Lang_Ecosystem/langgraph/github/langgraph"]
+	path = Modules/AI/Lang_Ecosystem/langgraph/github/langgraph
+	url = https://github.com/langchain-ai/langgraph.git
+[submodule "Modules/AI/Lang_Ecosystem/langgraph/langgraph_examples/github/langgraph-examples"]
+	path = Modules/AI/Lang_Ecosystem/langgraph/langgraph_examples/github/langgraph-examples
+	url = https://github.com/langchain-ai/langgraph.git
+[submodule "Modules/AI/Lang_Ecosystem/langsmith/github/langsmith-sdk"]
+	path = Modules/AI/Lang_Ecosystem/langsmith/github/langsmith-sdk
+	url = https://github.com/langchain-ai/langsmith-sdk.git
+[submodule "Modules/AI/Lang_Ecosystem/langsmith/langsmith_examples/github/langsmith-cookbook"]
+	path = Modules/AI/Lang_Ecosystem/langsmith/langsmith_examples/github/langsmith-cookbook
+	url = https://github.com/langchain-ai/langsmith-cookbook.git
+[submodule "Modules/AI/agents/MCP/FastMCP/FastMCP_Documentation_MCP/github/vscode-llm-fastmcp-context"]
+	path = Modules/AI/agents/MCP/FastMCP/FastMCP_Documentation_MCP/github/vscode-llm-fastmcp-context
+	url = https://github.com/abcSTARK/vscode-llm-fastmcp-context.git
+[submodule "Modules/AI/agents/MCP/FastMCP/github/fastmcp"]
+	path = Modules/AI/agents/MCP/FastMCP/github/fastmcp
+	url = https://github.com/jlowin/fastmcp.git
+[submodule "Modules/AI/agents/MCP/github/servers"]
+	path = Modules/AI/agents/MCP/github/servers
+	url = https://github.com/modelcontextprotocol/servers.git
+[submodule "Modules/VSCode/VSCode_Extension/VSCode_Github_Copilot/copilot_api_gateway/github/copilot-api-gateway"]
+	path = Modules/VSCode/VSCode_Extension/VSCode_Github_Copilot/copilot_api_gateway/github/copilot-api-gateway
+	url = https://github.com/suhaibbinyounis/github-copilot-api-vscode.git
+[submodule "Modules/VSCode/VSCode_Extension/VSCode_Github_Copilot/github/vscode-copilot-release"]
+	path = Modules/VSCode/VSCode_Extension/VSCode_Github_Copilot/github/vscode-copilot-release
+	url = https://github.com/microsoft/vscode-copilot-release.git
+[submodule "Modules/VSCode/VSCode_Extension/github/vscode-extension-samples"]
+	path = Modules/VSCode/VSCode_Extension/github/vscode-extension-samples
+	url = https://github.com/microsoft/vscode-extension-samples.git
+[submodule "Modules/VSCode/github/vscode-docs"]
+	path = Modules/VSCode/github/vscode-docs
+	url = https://github.com/microsoft/vscode-docs.git
+[submodule "Modules/arangodb/arangodb_mcp/github/mcp-server-arangodb"]
+	path = Modules/arangodb/arangodb_mcp/github/mcp-server-arangodb
+	url = https://github.com/arangodb/mcp-server-arangodb.git
+[submodule "Modules/arangodb/github/arangodb"]
+	path = Modules/arangodb/github/arangodb
+	url = https://github.com/arangodb/arangodb.git
+[submodule "Modules/docker/github/compose"]
+	path = Modules/docker/github/compose
+	url = https://github.com/docker/compose.git
+[submodule "Modules/mermaid/github/mermaid"]
+	path = Modules/mermaid/github/mermaid
+	url = https://github.com/mermaid-js/mermaid.git
+[submodule "Modules/mermaid/mermaid_mcp/github/mcp-mermaid"]
+	path = Modules/mermaid/mermaid_mcp/github/mcp-mermaid
+	url = https://github.com/hustcc/mcp-mermaid.git
+[submodule "Modules/playwright/github"]
+	path = Modules/playwright/github
+	url = https://github.com/microsoft/playwright.git
+[submodule "Modules/treesitter/github/tree-sitter"]
+	path = Modules/treesitter/github/tree-sitter
+	url = https://github.com/tree-sitter/tree-sitter.git
