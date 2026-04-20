@@ -10,6 +10,7 @@
 [submodule "Modules/AI/Lang_Ecosystem/langgraph/langgraph_examples/github/langgraph-examples"]
 	path = Modules/AI/Lang_Ecosystem/langgraph/langgraph_examples/github/langgraph-examples
 	url = https://github.com/langchain-ai/langgraph.git
+	branch = main
 [submodule "Modules/AI/Lang_Ecosystem/langsmith/github/langsmith-sdk"]
 	path = Modules/AI/Lang_Ecosystem/langsmith/github/langsmith-sdk
 	url = https://github.com/langchain-ai/langsmith-sdk.git
